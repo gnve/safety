@@ -12,7 +12,7 @@ fetch("https://gnve.github.io/safety/safetytips.csv")
     function displayRandomTip() {
       var randomTip = safetyTips[Math.floor(Math.random() * safetyTips.length)];
       safetyTipElement.innerHTML = randomTip.Tip;
-      safetySeasonElement.innerHTML = randomTip.Season;
+      safetySeasonElement.innerHTML = "Season: " + randomTip.Season;
       safetyDescriptionElement.innerHTML = randomTip.Description;
     }
 
