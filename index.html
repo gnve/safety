@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
     <title>Random Safety Tip Generator</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div class="container">
       <h1>Random Safety Tip Generator</h1>
-      <div class="square">
-        <div class="tip">
-          <h2 id="season"></h2>
-          <h2 id="tip"></h2>
-          <p id="description"></p>
+      <div class="tip-container">
+        <div class="tip-info">
+          <h2 id="safety-tip"></h2>
+          <p id="safety-season"></p>
+          <p id="safety-description"></p>
         </div>
-        <button id="retry-button">Retry</button>
+        <div class="tip-actions">
+          <button id="retry-button">Retry</button>
+        </div>
       </div>
-      <section class="footer">
-        <p>&copy; 2023 MyCompany. All Rights Reserved.</p>
-      </section>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@2/dist/crate.esm.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
     <script src="script.js"></script>
   </body>
+
 </html>
