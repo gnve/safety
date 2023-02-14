@@ -5,11 +5,15 @@ fetch("https://gnve.github.io/safety/safetytips.csv")
     var safetyTips = Papa.parse(data, { header: true, dynamicTyping: true }).data;
 
     var safetyTipElement = document.getElementById("safety-tip");
+    var safetySeasonElement = document.getElementById("safety-season");
+    var safetyDescriptionElement = document.getElementById("safety-description");
     var retryButton = document.getElementById("retry-button");
 
     function displayRandomTip() {
       var randomTip = safetyTips[Math.floor(Math.random() * safetyTips.length)];
-      safetyTipElement.innerHTML = "<h2>" + randomTip.Tip + "</h2><p>" + randomTip.Description + "</p>";
+      safetyTipElement.innerHTML = randomTip.Tip;
+      safetySeasonElement.innerHTML = "Season: " + randomTip.Season;
+      safetyDescriptionElement.innerHTML = randomTip.Description;
     }
 
     retryButton.addEventListener("click", displayRandomTip);
