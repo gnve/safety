@@ -1,53 +1,67 @@
+html,
 body {
+  height: 100%;
   margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background-color: #f8f8f8;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  height: 100%;
 }
 
 h1 {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
 }
 
-.tip-container {
+.square {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid #000000;
+  padding: 20px;
 }
 
-.tip-info {
-  text-align: center;
+.tip {
+  width: 75%;
+  padding-right: 20px;
+  box-sizing: border-box;
 }
 
-.tip-info h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+#retry-button {
+  width: 25%;
 }
 
-.tip-actions {
-  margin-left: 1rem;
-}
-
-button {
-  padding: 1rem;
-  font-size: 1.5rem;
-  border-radius: 0.5rem;
-  background-color: #3366cc;
-  color: white;
-  border: none;
-}
-
-button:hover {
+#retry-button:hover {
   cursor: pointer;
-  background-color: #003366;
+}
+
+#season {
+  font-style: italic;
+}
+
+#tip {
+  margin-top: 0;
+}
+
+#description {
+  margin-top: 0;
+  text-align: justify;
+}
+
+@media (max-width: 600px) {
+  .square {
+    flex-direction: column;
+  }
+  .tip {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+  #retry-button {
+    width: 100%;
+  }
 }
