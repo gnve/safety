@@ -1,67 +1,83 @@
-html,
 body {
-  height: 100%;
   margin: 0;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-h1 {
-  text-align: center;
-}
-
-.square {
+  padding: 0;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  border: 1px solid #000000;
-  padding: 20px;
+}
+
+.container {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .tip {
   width: 75%;
-  padding-right: 20px;
+  height: 100%;
+  padding: 20px;
   box-sizing: border-box;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-#retry-button {
+.tip h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.tip p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.btn {
   width: 25%;
+  height: 100%;
+  background-color: #FCA311;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#retry-button:hover {
-  cursor: pointer;
+.btn button {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #14213D;
+  color: white;
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-#season {
-  font-style: italic;
+.title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-weight: bold;
 }
 
-#tip {
-  margin-top: 0;
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
 }
 
-#description {
-  margin-top: 0;
-  text-align: justify;
-}
-
-@media (max-width: 600px) {
-  .square {
-    flex-direction: column;
-  }
-  .tip {
-    width: 100%;
-    padding-right: 0;
-    margin-bottom: 20px;
-  }
-  #retry-button {
-    width: 100%;
-  }
+.season {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
