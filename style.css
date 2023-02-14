@@ -1,28 +1,53 @@
-#container {
-  max-width: 800px;
-  margin: 0 auto;
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tip-container {
+  flex: 2;
   padding: 20px;
-  border: 1px solid #ccc;
 }
 
-#header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#footer {
-  text-align: center;
-  margin-top: 20px;
-}
-
-#safety-tip {
-  margin-bottom: 20px;
-}
-
-#safety-tip h2 {
+.tip-season {
+  margin: 0;
   font-size: 24px;
 }
 
-#safety-tip p {
+.tip-name {
+  margin: 0;
+  font-size: 48px;
+}
+
+.tip-description {
+  margin: 0;
   font-size: 16px;
+}
+
+.button-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#retry-button {
+  padding: 20px;
+  font-size: 24px;
+  border-radius: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#retry-button:hover {
+  background-color: #0056b3;
 }

@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>My Safety Tips Portfolio</title>
+    <title>Random Safety Tip Generator</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
   </head>
   <body>
-    <div id="container">
-      <div id="header">
-        <h1>My Safety Tips Portfolio</h1>
+    <div class="container">
+      <div class="tip-container">
+        <h2 class="tip-season"></h2>
+        <h1 class="tip-name"></h1>
+        <p class="tip-description"></p>
       </div>
-      <div id="content">
-        <div id="safety-tip">
-          <!-- The safety tip will be displayed here -->
-        </div>
-        <button id="retry-button">Retry</button>
-      </div>
-      <div id="footer">
-        <p>&copy; 2023 My Safety Tips Portfolio</p>
+      <div class="button-container">
+        <button id="retry-button">Generate Another Tip</button>
       </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@2/dist/crate.esm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
