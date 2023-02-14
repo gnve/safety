@@ -1,0 +1,28 @@
+#container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+#header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#safety-tip {
+  margin-bottom: 20px;
+}
+
+#safety-tip h2 {
+  font-size: 24px;
+}
+
+#safety-tip p {
+  font-size: 16px;
+}
