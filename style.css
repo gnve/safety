@@ -1,53 +1,41 @@
-html,
 body {
-  height: 100%;
   margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-.container {
-  height: 100%;
+.main-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
-.tip-container {
-  flex: 2;
-  padding: 20px;
-}
-
-.tip-season {
-  margin: 0;
-  font-size: 24px;
-}
-
-.tip-name {
-  margin: 0;
-  font-size: 48px;
-}
-
-.tip-description {
-  margin: 0;
-  font-size: 16px;
+.safety-tip-container {
+  margin-right: 50px;
 }
 
 .button-container {
-  flex: 1;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
-#retry-button {
-  padding: 20px;
-  font-size: 24px;
-  border-radius: 10px;
-  background-color: #007bff;
+button {
+  background-color: #4CAF50;
   color: white;
   border: none;
+  border-radius: 4px;
+  padding: 10px;
+  margin-left: 20px;
   cursor: pointer;
 }
 
-#retry-button:hover {
-  background-color: #0056b3;
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+  font-size: 12px;
 }
