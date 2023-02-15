@@ -3,9 +3,9 @@ fetch('safety-tips.json')
   .then(response => response.json())
   .then(tips => {
     // Select the elements
-    const seasonElement = document.getElementById('season');
-    const tipElement = document.getElementById('tip');
-    const descriptionElement = document.getElementById('description');
+    const seasonElement = document.getElementById('Season');
+    const tipElement = document.getElementById('Tip');
+    const descriptionElement = document.getElementById('Description');
     const retryButton = document.getElementById('retry-button');
 
     // Add an event listener to the retry button
