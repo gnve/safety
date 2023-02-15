@@ -1,24 +1,31 @@
-// Retrieve the data from the array.js file
-fetch("array.js")
-  .then(response => response.text())
-  .then(data => {
-    // Parse the data into an array of objects
-    var safetyTips = JSON.parse(data);
+// Load the safety tips from the JSON file
+fetch('safety-tips.json')
+  .then(response => response.json())
+  .then(tips => {
+    // Select the elements
+    const seasonElement = document.getElementById('season');
+    const tipElement = document.getElementById('tip');
+    const descriptionElement = document.getElementById('description');
+    const retryButton = document.getElementById('retry-button');
 
-    var safetyTipElement = document.getElementById("safety-tip");
-    var safetySeasonElement = document.getElementById("safety-season");
-    var safetyDescriptionElement = document.getElementById("safety-description");
-    var retryButton = document.getElementById("retry-button");
+    // Add an event listener to the retry button
+    retryButton.addEventListener('click', displayRandomTip);
 
+    // Display a random safety tip
     function displayRandomTip() {
-      var randomTip = safetyTips[Math.floor(Math.random() * safetyTips.length)];
-      safetyTipElement.innerHTML = randomTip.Tip;
-      safetySeasonElement.innerHTML = "Season: " + randomTip.Season;
-      safetyDescriptionElement.innerHTML = randomTip.Description;
+      // Generate a random index
+      const randomIndex = Math.floor(Math.random() * tips.length);
+
+      // Get the safety tip at the random index
+      const tip = tips[randomIndex];
+
+      // Update the elements with the safety tip information
+      seasonElement.innerHTML = tip.season;
+      tipElement.innerHTML = tip.tip;
+      descriptionElement.innerHTML = tip.description;
     }
 
-    retryButton.addEventListener("click", displayRandomTip);
-
-    // Display a random tip when the page loads
+    // Display an initial safety tip
     displayRandomTip();
   });
+
