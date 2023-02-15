@@ -10,6 +10,11 @@ retryButton.addEventListener('click', displayRandomTip);
 // Load the safety tips from the safety-tips.js file
 const tips = safetyTips;
 
+// debug
+console.log(seasonElement);
+console.log(tipElement);
+console.log(descriptionElement);
+
 // Display a random safety tip
 function displayRandomTip() {
   // Generate a random index
