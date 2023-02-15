@@ -1,12 +1,13 @@
-fetch("https://gnve.github.io/safety/safetytips.csv")
+// Retrieve the data from the array.js file
+fetch("array.js")
   .then(response => response.text())
   .then(data => {
-    // Parse the CSV data into an array of objects
-    var safetyTips = Papa.parse(data, { header: true, dynamicTyping: true }).data;
+    // Parse the data into an array of objects
+    var safetyTips = JSON.parse(data);
 
-    var safetyTipElement = document.getElementById("tip");
-    var safetySeasonElement = document.getElementById("season");
-    var safetyDescriptionElement = document.getElementById("description");
+    var safetyTipElement = document.getElementById("safety-tip");
+    var safetySeasonElement = document.getElementById("safety-season");
+    var safetyDescriptionElement = document.getElementById("safety-description");
     var retryButton = document.getElementById("retry-button");
 
     function displayRandomTip() {
