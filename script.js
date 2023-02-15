@@ -19,9 +19,9 @@ function displayRandomTip() {
   const tip = tips[randomIndex];
 
   // Update the elements with the safety tip information
-  seasonElement.innerHTML = tip.season;
-  tipElement.innerHTML = tip.tip;
-  descriptionElement.innerHTML = tip.description;
+  seasonElement.innerHTML = tip.Season;
+  tipElement.innerHTML = tip.Tip;
+  descriptionElement.innerHTML = tip.Description;
 }
 
 // Display an initial safety tip
