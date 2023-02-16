@@ -1,74 +1,72 @@
-body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f2f2f2;
-}
-
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7ede2;
 }
 
-h1 {
-  font-size: 3rem;
-  text-align: center;
-  margin: 0;
+.season-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Add margin to the top */
 }
 
-.square {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 80vw;
-  height: 80vw;
-  max-width: 500px;
-  max-height: 500px;
-  background-color: white;
-  border: 2px solid black;
-  border-radius: 10px;
-  margin-top: 2rem;
+.season-buttons button {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  background-color: #ccd5ae;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.season-buttons button#retry-button {
+  background-color: #d4a373;
+}
+
+.tip-container {
+  margin-top: 20px;
+  height: 200px; /* Add a fixed height */
+  overflow: auto; /* Add a scrollbar if the content overflows the height */
+}
+
+.season {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .tip {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 75%;
-  height: 100%;
-  padding: 1rem;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-#season {
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  margin: 0;
+.description {
+  font-size: 16px;
 }
 
-#tip {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 0.5rem 0;
+/* For screens smaller than 600px, stack the buttons vertically */
+@media (max-width: 600px) {
+  .season-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-#description {
-  font-size: 1.2rem;
-  margin: 0;
-  text-align: justify;
+/* For screens smaller than 400px, reduce the font size of the buttons */
+@media (max-width: 400px) {
+  .season-buttons button {
+    font-size: 14px;
+  }
 }
 
-#retry-button {
-  width: 20%;
-  height: 20%;
-  font-size: 1.2rem;
-  border: 2px solid black;
-  border-radius: 50%;
-  background-color: white;
-  margin-left: 1rem;
+/* For screens smaller than 320px, reduce the font size of the tip text */
+@media (max-width: 320px) {
+  .tip-container p {
+    font-size: 14px;
+  }
 }

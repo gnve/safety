@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <title>Random Safety Tip Generator</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Random Safety Tip</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <div class="container">
-      <h1>Random Safety Tip Generator</h1>
-      <div class="square">
-        <div class="tip">
-          <h2 id="Season"></h2>
-          <h2 id="Tip"></h2>
-          <p id="Description"></p>
-        </div>
-        <button id="retry-button">Retry</button>
+      <h1>Random Safety Tip</h1>
+
+      <div class="tip-container">
+        <p class="season" id="Season"></p>
+        <p class="tip" id="Tip"></p>
+        <p class="description" id="Description"></p>
+      </div>
+      
+	  <div class="season-buttons">
+        <button id="summer">Summer</button>
+        <button id="winter">Winter</button>
+        <button id="spring">Spring</button>
+        <button id="fall">Fall</button>
+		<button id="year-round">Year-Round</button>
+		<button id="retry-button">Retry</button>
       </div>
     </div>
     <script src="safety-tips.js"></script>
